@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WMS Teacher Rants</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Password Gate -->
+  <div id="gate">
+    <h2>Enter Access Password</h2>
+    <input type="password" id="accessPassword" placeholder="Enter password" />
+    <button onclick="checkAccess()">Enter</button>
+  </div>
+
+  <!-- Login / Signup -->
+  <div id="auth" style="display: none;">
+    <h2>Login / Sign Up</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="signup()">Sign Up</button>
+    <button onclick="login()">Login</button>
+    <p id="authMsg"></p>
+  </div>
+
+  <!-- Main Posting Page -->
+  <div id="main" style="display: none;">
+    <h2>Welcome to WMS Teacher Rants</h2>
+    <p id="loggedInUser"></p>
+
+    <!-- Posting Area -->
+    <textarea id="postContent" placeholder="What's on your mind?"></textarea>
+    <button onclick="post()">Post</button>
+    <button onclick="loadPosts()">Refresh Posts</button>
+    <button onclick="adminLogin()">Admin Panel</button>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel" style="display: none;">
+      <h3>Admin Panel</h3>
+      <input type="text" id="verifyUsername" placeholder="Username to verify"/>
+      <button onclick="verifyUser()">Verify User</button>
+    </div>
+
+    <!-- Posts Display -->
+    <div id="posts"></div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
